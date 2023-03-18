@@ -1,0 +1,17 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+# Install dependancies
+RUN apk add --no-cache python3 py3-setuptools py3-twisted py3-pip git mosquitto-clients
+
+RUN git clone https://bitbucket.cburn.freeddns.org/scm/ngha/txcgate.git /txcgate
+RUN pip3 install /txcgate
+RUN git clone -b hass https://bitbucket.cburn.freeddns.org/scm/ngha/cgate2mqtt.git /cgate2mqtt
+RUN pip3 install /cgate2mqtt
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
