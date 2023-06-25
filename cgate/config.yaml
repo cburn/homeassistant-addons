@@ -1,0 +1,19 @@
+name: "CGate"
+description: "Clipsal CBUS C-Gate Server"
+version: "0.1.12"
+slug: "cgate"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  20023/tcp: 20023
+  20024/tcp: 20024
+  20025/tcp: 20025
+  20026/tcp: 20026
+  20123/tcp: 20123
+map:
+  - config:rw

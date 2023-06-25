@@ -1,0 +1,29 @@
+#!/command/with-contenv bashio
+
+# Ensure configuration exists
+if ! bashio::fs.directory_exists '/config/CGate/'; then
+    mkdir -p /config/CGate/config \
+        || bashio::exit.nok "Failed to create CGate configuration directory"
+    mkdir -p /config/CGate/tag \
+        || bashio::exit.nok "Failed to create CGate project directory"
+    mkdir -p /config/CGate/logs \
+        || bashio::exit.nok "Failed to create CGate log directory"
+
+    # Copy in config files
+    cp /etc/cgate/config/access.txt /config/CGate/config
+    cp /etc/cgate/config/C-GateConfig.txt /config/CGate/config
+    cp /etc/cgate/config/C-groups.txt /config/CGate/config
+
+    # Copy template projects
+     cp /etc/cgate/tag/EXAMPLE.xml /config/CGate/tag
+     cp /etc/cgate/tag/HOME.xml /config/CGate/tag
+
+     bashio::log.info "Copied CGATE config files."
+fi
+
+rm -fr /cgate/tag
+ln -s /config/CGate/tag /cgate/tag
+rm -fr /cgate/config
+ln -s /config/CGate/config /cgate/config
+rm -fr /cgate/logs
+ln -s /config/CGate/logs /cgate/logs

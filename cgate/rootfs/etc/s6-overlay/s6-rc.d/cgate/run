@@ -1,0 +1,9 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+
+
+cd /cgate || bashio::exit.nok "Could not change directory to CGATE"
+
+bashio::log.info "Starting CGATE..."
+
+exec java -Djava.library.path=. -jar cgate.jar
