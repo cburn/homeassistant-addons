@@ -12,4 +12,4 @@ RUN unzip /cgate-2.11.4_3251.zip
 COPY rootfs /
 
 COPY java.security.patch /
-#RUN patch /usr/lib/jvm/default-jvm/jre/lib/security/java.security /java.security.patch
+RUN patch /usr/lib/jvm/default-jvm/jre/lib/security/java.security /java.security.patch
