@@ -1,0 +1,3 @@
+[submodule "ser2sock"]
+	path = ser2sock
+	url = https://github.com/mririgoyen/hassio-addon-ser2sock.git
