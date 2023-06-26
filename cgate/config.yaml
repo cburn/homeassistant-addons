@@ -1,6 +1,6 @@
 name: "CGate"
 description: "Clipsal CBUS C-Gate Server"
-version: "0.1.14"
+version: "0.1.15"
 slug: "cgate"
 init: false
 startup: services
