@@ -1,0 +1,7 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+
+
+bashio::log.info "Starting ser2sock..."
+
+exec ser2sock -g 2 -f /etc/ser2sock.conf -p -s $(bashio::config 'serialDevice')
