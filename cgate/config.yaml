@@ -1,6 +1,6 @@
 name: "CGate"
 description: "Clipsal CBUS C-Gate Server"
-version: "0.1.15"
+version: "0.1.16"
 slug: "cgate"
 init: false
 startup: services
@@ -20,6 +20,6 @@ ports:
 map:
   - config:rw
 options:
-  - serialDevice: "/dev/ttyAMA0"
+  serialDevice: "/dev/ttyAMA0"
 schema:
-  - serialDevice: str
+  serialDevice: str
