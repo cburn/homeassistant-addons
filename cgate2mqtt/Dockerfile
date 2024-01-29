@@ -7,7 +7,7 @@ RUN apk add --no-cache python3 py3-setuptools py3-twisted py3-pip git mosquitto-
 
 RUN git clone https://bitbucket.cburn.freeddns.org/scm/ngha/txcgate.git /txcgate
 RUN pip3 install /txcgate
-RUN git clone -b hass https://bitbucket.cburn.freeddns.org/scm/ngha/cgate2mqtt.git /cgate2mqtt
+RUN git clone https://bitbucket.cburn.freeddns.org/scm/ngha/cgate2mqtt.git /cgate2mqtt
 RUN pip3 install /cgate2mqtt
 
 # Copy data for add-on
