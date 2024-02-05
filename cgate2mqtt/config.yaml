@@ -16,6 +16,6 @@ options:
 schema:
   cgate_host: "str"
   mqtt_host: "str?"
-  mqtt_port: "int(2,6)?"
+  mqtt_port: "str?"
   mqtt_user: "str?"
   mqtt_pass: "str?"
