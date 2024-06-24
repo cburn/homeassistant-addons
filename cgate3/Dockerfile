@@ -22,3 +22,6 @@ RUN unzip /cgate-3.3.2_1855.zip
 
 # Copy data for add-on
 COPY rootfs /
+
+COPY java.security.patch /
+RUN patch /usr/lib/jvm/default-jvm/jre/lib/security/java.security /java.security.patch
