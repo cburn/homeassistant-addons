@@ -4,8 +4,8 @@
 
 cd /cgate || bashio::exit.nok "Could not change directory to CGATE"
 
-CGATE_HOME = /config/CGate3/home
-CGATE_APPDATA = /config/CGate3/appdata
+export CGATE_HOME=/config/CGate3/home
+export CGATE_APPDATA=/config/CGate3/appdata
 
 bashio::log.info "Starting CGATE..."
 

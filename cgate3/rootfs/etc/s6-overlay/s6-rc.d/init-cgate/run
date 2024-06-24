@@ -4,8 +4,12 @@
 if ! bashio::fs.directory_exists '/config/CGate3/'; then
     mkdir -p /config/CGate3/home/Projects \
         || bashio::exit.nok "Failed to create CGate3 home directory"
-    mkdir -p /config/CGate/appdata/config \
+    mkdir -p /config/CGate3/appdata/config \
         || bashio::exit.nok "Failed to create CGate3 appdata directory"
+
+    # Copy in config files
+    cp /etc/cgate/config/access.txt /config/CGate3/appdata/config
+    cp /etc/cgate/config/C-GateConfig.txt /config/CGate3/appdata/config
 
      # Copy template projects
      cp /etc/cgate/tag/EXAMPLE.xml /config/CGate3/home/Projects

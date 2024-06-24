@@ -17,7 +17,7 @@ RUN \
   cd .. && \
   rm -rf ser2sock
 
-ADD https://download.schneider-electric.com/files?p_Doc_Ref=C-Gate_3_Linux_Package_V3.3.2&p_enDocType=Software+-+Release&p_File_Name=cgate-3.3.2_1855.zip /
+ADD https://download.schneider-electric.com/files?p_Doc_Ref=C-Gate_3_Linux_Package_V3.3.2&p_enDocType=Software+-+Release&p_File_Name=cgate-3.3.2_1855.zip /cgate-3.3.2_1855.zip
 RUN unzip /cgate-3.3.2_1855.zip
 
 # Copy data for add-on
