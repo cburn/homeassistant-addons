@@ -234,7 +234,7 @@ config-change-port=20026
 # Scope:         global
 # Effective on:  restart
 ###
-config-path=config
+config-path=/config/CGate3/appdata/config
 
 #### console.enable-commands:
 # allow command input on the console
@@ -250,7 +250,7 @@ console.enable-commands=yes
 # Scope:         global
 # Effective on:  restart
 ###
-dali.catalogue.dir.user=Dali Catalogue/
+dali.catalogue.dir.user=/config/CGate3/home/Dali Catalogue/
 
 #### default-tag-db:
 # (DEPRECATED -- only supported to prevent errors for old configs
@@ -402,7 +402,7 @@ event.display-oids=yes
 # Scope:         global
 # Effective on:  immediate
 ###
-file.base=.
+file.base=/config/CGate3/appdata/
 
 #### global-event-level:
 # Global event reporting level (events <= event level will be reported (range 0-9)
@@ -434,7 +434,7 @@ hide-project-names=no
 # Scope:         global
 # Effective on:  restart
 ###
-instance.lock-file=cgate.lock
+instance.lock-file=/config/CGate3/appdata/cgate.lock
 
 #### instance.lock-timeout:
 # stale timeout for instance lock file, in seconds
@@ -650,7 +650,7 @@ project.default=
 # Scope:         global
 # Effective on:  restart
 ###
-project.default.archive-dir=Projects/archived/
+project.default.archive-dir=/config/CGate3/home/Projects/archived/
 
 #### project.default.dir:
 # Default directory holding project files
@@ -658,7 +658,7 @@ project.default.archive-dir=Projects/archived/
 # Scope:         global
 # Effective on:  restart
 ###
-project.default.dir=Projects/
+project.default.dir=/config/CGate3/home/Projects/
 
 #### project.start:
 # Space-separated list of projects to start on server startup
@@ -890,7 +890,7 @@ unit-auto-update-db=no
 # Scope:         global
 # Effective on:  restart
 ###
-unit.template.default.dir=Assets/Device Template Files/
+unit.template.default.dir=/config/CGate3/home/Assets/Device Template Files/
 
 #### unitcatalog.directory:
 # Directory where the unit catalog is stored (relative to server home directory)
