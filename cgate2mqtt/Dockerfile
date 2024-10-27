@@ -5,9 +5,9 @@ FROM $BUILD_FROM
 # Install dependancies
 RUN apk add --no-cache python3 py3-setuptools py3-twisted py3-pip git mosquitto-clients
 
-RUN git clone https://bitbucket.cburn.freeddns.org/scm/ngha/txcgate.git /txcgate
+RUN git clone https://github.com/cburn/txcgate.git /txcgate
 RUN pip3 install /txcgate --break-system-packages
-RUN git clone -b json https://bitbucket.cburn.freeddns.org/scm/ngha/cgate2mqtt.git /cgate2mqtt
+RUN git clone https://github.com/cburn/cgate2mqtt.git /cgate2mqtt
 RUN pip3 install /cgate2mqtt --break-system-packages
 
 # Copy data for add-on
